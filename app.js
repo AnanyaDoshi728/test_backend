@@ -6,9 +6,12 @@ const taskRouter = require('./routes/tasks')
 const connectDatabase = require('./db/connection')
 require('dotenv').config()
 
+
 // app.use(express.static('./browser-app'))
 
 app.use(express.json())
+
+
 app.get('/',(req,res) => {
     res.status(200).json({success: true,data: []})
 })
